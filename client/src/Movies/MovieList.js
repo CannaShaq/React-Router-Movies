@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MovieList = props => {
   return (
@@ -13,16 +14,25 @@ const MovieList = props => {
 function MovieDetails({ movie }) {
   const { title, director, metascore } = movie;
   return (
+    
     <div className="movie-card">
+      <Link to={`/movies/${movie}`}>
       <h2>{title}</h2>
+      </Link>
       <div className="movie-director">
         Director: <em>{director}</em>
       </div>
       <div className="movie-metascore">
         Metascore: <strong>{metascore}</strong>
       </div>
+      
     </div>
+    
   );
 }
 
 export default MovieList;
+
+
+/*<Link to={`/movies/${movie}`}> line17*/
+/*</Link> line 28*/
