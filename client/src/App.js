@@ -37,7 +37,9 @@ const App = () => {
 
 
       {/* /movie/{$id} route */}
-      <Route path="/movies/:id" component={Movie}/>
+      <Route path="/movies/:id">
+        <Movie/>
+      </Route>
 
 
 
