@@ -14,10 +14,11 @@ const MovieList = props => {
 function MovieDetails({ movie }) {
   const { title, director, metascore } = movie;
   return (
-    <Link to={`/movies/${movie}`}>
+    
     <div className="movie-card">
-      
+      <Link to={`/movies/${movie}`}>
       <h2>{title}</h2>
+      </Link>
       <div className="movie-director">
         Director: <em>{director}</em>
       </div>
@@ -26,8 +27,12 @@ function MovieDetails({ movie }) {
       </div>
       
     </div>
-    </Link>
+    
   );
 }
 
 export default MovieList;
+
+
+/*<Link to={`/movies/${movie}`}> line17*/
+/*</Link> line 28*/
